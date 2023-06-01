@@ -1,8 +1,14 @@
 function MinerGrid(props) {
-  return (
-      <img src={props.srcFoto} />
-  );
+  const sinal = props.sinal
+  const sinal_embaralhado = sinal.map((Element, index) => {
+    return (
+      <img key={index} src={Element} />
+    )
+  })
 
+  return (
+    <>{sinal_embaralhado}</>
+  );
 }
 
 export default MinerGrid;

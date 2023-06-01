@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import './Mines.css'
 import MinerGrid from "./MinerGrid/MineGrid";
 import MinesPreload from "./MinerPreload/MinesPreload";
+import Timer from "../../../Timer"
 
-const [render, serRender] = useState(false)
 
 const circulosEstrelas = [
   '/imgs/fechado.png', 'imgs/fechado.png', 'imgs/star.png', 'imgs/fechado.png', 'imgs/fechado.png',
@@ -22,27 +22,17 @@ const loadSinal = () => {
   const arrayEmbaralhado = arrayfixo.sort(() => Math.random() - 0.5)
   return arrayEmbaralhado
 }
-const sinal = [...loadSinal()]
 
-function condRender() {
-  if (render === 'true') {
-    return (
-      sinal.map((linha, index) => {
-        return (
-          <MinerGrid srcFoto={linha} />
-        )
-      })
-    )
-  } else {
-    circulosEstrelas.map((Element) => {
-      return (
-        <MinesPreload srcFoto={circulosEstrelas[0]} />
-      )
-    })
-  }
-}
 
 function Mines() {
+  const [render, setRender] = useState(false)
+  const [sinal, setSinal] = useState(loadSinal())
+ 
+  function handle() {
+    setRender(!render)
+    setSinal(loadSinal())
+  }
+
   return (
     <div className="content">
       <div className="main">
@@ -51,15 +41,17 @@ function Mines() {
             <p className="tentativas">3 tentativas</p>
             <p className="qtminas">💣5 minas</p>
             <p className="valido-ate">Válido ate:</p>
-            <p className="wapper-hora">00:00</p>
+            <div className="wapper-hora">{render ? <Timer setRender={setRender} /> : '00:00'}</div>
             <p className="entreNoJogo">👇Entre no Jogo Abaixo👇</p>
           </div>
           <div className="wpper-sinal">
             <div className="grid">
-            condRender()
+              {
+                render ? <MinerGrid sinal={sinal} /> : <MinesPreload sinal={circulosEstrelas} sinalFixo={circulosEstrelas} />
+              }
             </div>
             <div className="wapperBtn">
-              <button onClick={loadSinal} className="geraSinal">HACKEAR SINAL</button>
+              <button disabled={ render ? true : false} onClick={handle} className="geraSinal">HACKEAR SINAL</button>
               <button className="acessarJogoBtn">
                 <p className="textAcessarbtn">ACESSAR JOGO</p>
               </button>
