@@ -5,7 +5,6 @@ function MinesPreload(props) {
       <img key={index} src={props.sinalFixo[0]} />
     )
   })
-
   return (
     <>{sinal_embaralhado}</>
   );

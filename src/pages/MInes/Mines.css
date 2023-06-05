@@ -8,7 +8,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.entreNoJogo {
+.entreNoJogo-Mines {
   margin-top: 10px;
 }
 
@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-.content {
+.content-Mines {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ iframe {
   height: 80vh;
 }
 
-.ifrmeWapper {
+.ifrmeWapper-Mines {
   width: 95%;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ iframe {
   border-radius: 0 0 15px 15px;
 }
 
-.main {
+.main-Mines {
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -53,26 +53,26 @@ iframe {
   padding: 20px;
 }
 
-.info-play {
+.info-play-Mines {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 20px 20px 20px;
 }
 
-.bombaBg {
+.bombaBg-Mines {
   top: -13px;
   left: 101px;
   position: absolute;
   width: 744px;
 }
 
-.wapper-hora {
+.wapper-hora-Mines {
   display: flex;
   gap: 2px;
 }
 
-.cardH {
+.cardH-Mines {
   border: solid 2px #0043e4;
   width: 50px;
   height: 60px;
@@ -83,36 +83,36 @@ iframe {
   font-weight: bold;
 }
 
-.wpper-sinal {
+.wpper-sinal-Mines {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.qtminas {
+.qtminas-Mines {
   margin-top: 10px;
   font-weight: bold;
   font-size: 18px;
 }
 
-.grid {
+.grid-Mines {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
 }
 
-.valido-ate {
+.valido-ate-Mines {
   font-weight: bold;
   font-size: 18px;
 }
 
-.face {
+.face-Mines {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.front {
+.front-Mines {
   background: linear-gradient(45deg, #0043e4 35%, rgb(21, 93, 145) 100%);
   border-radius: 5px;
   border: solid 1px #00335a;
@@ -122,7 +122,7 @@ iframe {
 
 }
 
-.back {
+.back-Mines {
   background: linear-gradient(315deg, rgba(236, 120, 12, 1) 9%, rgba(249, 181, 25, 1) 61%);
   border-radius: 5px;
   border: solid 1px #4b3002;
@@ -145,7 +145,7 @@ button {
   z-index: 3;
 }
 
-.carregamento {
+.carregamento-Mines{
   animation: is-rotating 1s infinite;
   border: 3px solid #ffffff;
   border-radius: 50%;
@@ -160,13 +160,13 @@ button {
   }
 }
 
-.wapperBtn {
+.wapperBtn-Mines {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-.geraSinal {
+.geraSinal-Mines {
   margin-right: 50px;
 }
 

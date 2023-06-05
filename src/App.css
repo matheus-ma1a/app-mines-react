@@ -22,12 +22,12 @@ header {
   height: 250px;
 }
 
-.imgSLD{
+.imgSLD-Home{
   width: 350px;
   margin-left: 10px;
 }
 
-.img-slide {
+.img-slide-Home {
   margin-top: 20px;
   display: flex;
   position: absolute;

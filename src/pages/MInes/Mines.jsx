@@ -23,10 +23,9 @@ const loadSinal = () => {
   return arrayEmbaralhado
 }
 
-
 function Mines() {
   const [render, setRender] = useState(false)
-  const [sinal, setSinal] = useState(loadSinal())
+  const [sinal, setSinal] = useState()
  
   function handle() {
     setRender(!render)
@@ -34,34 +33,34 @@ function Mines() {
   }
 
   return (
-    <div className="content">
-      <div className="main">
-        <div className="wpper">
-          <div className="info-play">
-            <p className="tentativas">3 tentativas</p>
-            <p className="qtminas">💣5 minas</p>
-            <p className="valido-ate">Válido ate:</p>
-            <div className="wapper-hora">{render ? <Timer setRender={setRender} /> : '00:00'}</div>
-            <p className="entreNoJogo">👇Entre no Jogo Abaixo👇</p>
+    <div className="content-Mines">
+      <div className="main-Mines">
+        <div className="wpper-Mines">
+          <div className="info-play-Mines">
+            <p className="tentativas-Mines">3 tentativas</p>
+            <p className="qtminas-Mines">💣5 minas</p>
+            <p className="valido-ate-Mines">Válido ate:</p>
+            <div className="wapper-hora-Mines">{render ? <Timer setRender={setRender} /> : '00:00'}</div>
+            <p className="entreNoJogo-Mines">👇Entre no Jogo Abaixo👇</p>
           </div>
-          <div className="wpper-sinal">
-            <div className="grid">
+          <div className="wpper-sinal-Mines">
+            <div className="grid-Mines">
               {
                 render ? <MinerGrid sinal={sinal} /> : <MinesPreload sinal={circulosEstrelas} sinalFixo={circulosEstrelas} />
               }
             </div>
-            <div className="wapperBtn">
-              <button disabled={ render ? true : false} onClick={handle} className="geraSinal">HACKEAR SINAL</button>
-              <button className="acessarJogoBtn">
-                <p className="textAcessarbtn">ACESSAR JOGO</p>
+            <div className="wapperBtn-Mines">
+              <button disabled={ render ? true : false} onClick={handle} className="geraSinal-Mines">HACKEAR SINAL</button>
+              <button className="acessarJogoBtn-Mines">
+                <p className="textAcessarbtn-Mines">ACESSAR JOGO</p>
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="ifrmeWapper">
-        {/* <iframe src="https://go.aff.afiliadoszep.bet/6yw4h6mg" frameBorder="0"></iframe> */}
+      <div className="ifrmeWapper-Mines">
+        <iframe src="https://go.aff.afiliadoszep.bet/6yw4h6mg" frameBorder="0"></iframe>
       </div>
     </div>
   )
