@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Mines.css'
 import MinerGrid from "./MinerGrid/MineGrid";
 import MinesPreload from "./MinerPreload/MinesPreload";
-import Timer from "../../../Timer"
+import Timer from "../../components/Timer"
 
 
 const circulosEstrelas = [

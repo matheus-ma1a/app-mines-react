@@ -1,45 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import './penatly.css'
+import Timer from "../../components/Timer"
+import PenaltyPreload from "./PenaltyPreload";
+
+const classes = ['card', 'card', 'card', 'card', 'bola']
+
+const baguncaSinal = () => {
+    const arrayfixo = [...classes]
+    const arrayEmbaralhado = arrayfixo.sort(() => Math.random() - 0.5)
+    return arrayEmbaralhado
+}
+
 
 function Penalty() {
-  return ( 
-    <>
-       <div class="content-penalty">
-        <div class="grid-penalty">
-            <div class="envolvetx-penalty">
-                <p class="infoEntrada-penalty" >🎯Entrada:</p>
-                <img class="bandeiras-penalty" src="" alt=""/>
-                <p class="timer-penalty" >00:00</p>
-            </div>
+    const [render, setRender] = useState(false)
+    const [sinal, setSinal] = useState(baguncaSinal())
 
-            <div class="contentsinalEBotons-penalty">
-                <div class="contetnSinal-penalty">
-                    <div class="waper gap">
-                        <div class="div1 card " ></div>
-                        <div class="div2 card " ></div>
+
+    return (
+        <div className="wapper-penalty">
+            <div className="content-penalty">
+                <div className="grid-penalty">
+                    <div className="p envolvetx-penalty">
+                        <p className="infoEntrada-penalty" >🎯Entrada:</p>
+                        <img className="bandeiras-penalty" src="" alt="" />
+                        <p className="p timer-penalty">{render ? <Timer setRender={setRender} /> : '00:00'}</p>
                     </div>
-        
-                        <div class="div3 card " ></div>
-        
-                    <div class="wapper2 gap">
-                        <div class="div4 card " ></div>
-                        <div class="div5 card " ></div>
-                    </div>
-                </div>
 
-                <div class="wapperBtn-penalty">
-                    <button class="myButton1-penalty" >HACKER SINAL</button>
-                    <button class="myButton2-penalty" ><p class="textAcessarbtn-penalty" >ACESSAR JOGO</p></button>
+                    <div className="contentsinalEBotons-penalty">
+                        <div className="contetnSinal-penalty">
+                            {render ? <PenaltyPreload array={sinal} /> : <PenaltyPreload array={sinal} />}
+                        </div>
+
+                        <div className="wapperBtn-penalty">
+                            <button
+                                disabled={render ? true : false}
+                                onClick={() => {
+
+                                    setRender(!render)
+                                    setSinal(baguncaSinal())
+                                }}
+                                className="button myButton1-penalty"
+                            >HACKER SINAL</button>
+                            <button className="button myButton2-penalty" ><p className="textAcessarbtn-penalty" >ACESSAR JOGO</p></button>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="iframe-penalty">
+                    <iframe className="iframe-content" src="https://go.aff.afiliadoszep.bet/6yw4h6mg" frameborder="0"></iframe>
                 </div>
             </div>
-
         </div>
-        <div class="iframe-penalty">
-            {/* <iframe src="https://go.aff.afiliadoszep.bet/6yw4h6mg" frameborder="0"></iframe> */}
-        </div>
-    </div>
-    </>
-   );
+    );
 }
 
 export default Penalty;

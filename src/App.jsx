@@ -32,9 +32,6 @@ function App() {
         <Link to={'/penalty'} >
           <Li img='../imgs/penalty.jpg' />
         </Link>
-        <Li img='../imgs/studio.png' link='#' />
-        <Li img='../imgs/studio.png' link='#' />
-        <Li img='../imgs/studio.png' link='#' />
       </ul>
 
       <Footer />
