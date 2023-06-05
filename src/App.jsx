@@ -9,13 +9,13 @@ function App() {
     <>
 
       <div className='img-slide-Home' >
-        <img className='imgSLD-Home' src="../imgs/imgSlide/1.png" alt="" />
-        <img className='imgSLD-Home' src="../imgs/imgSlide/10.png" alt="" />
-        <img className='imgSLD-Home' src="../imgs/imgSlide/11.png" alt="" />
-        <img className='imgSLD-Home' src="../imgs/imgSlide/2.png" alt="" />
-        <img className='imgSLD-Home' src="../imgs/imgSlide/3.png" alt="" />
-        <img className='imgSLD-Home' src="../imgs/imgSlide/5.png" alt="" />
-        <img className='imgSLD-Home' src="../imgs/imgSlide/9.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/1.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/10.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/11.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/2.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/3.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/5.png" alt="" />
+        <img className='imgSLD-Home' src="imgs/imgSlide/9.png" alt="" />
       </div>
 
       <header>
