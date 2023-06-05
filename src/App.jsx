@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Li from './components/Li/Li'
@@ -24,8 +25,13 @@ function App() {
       </header>
 
       <ul>
-        <Li img='../imgs/mines.jpg' link='http://localhost:5173/mines' />
-        <Li img='../imgs/penalty.jpg' link='https://hackerdacasa.online/penalty/penalty.html' />
+        <Link to={'/mines'} >
+          <Li img='../imgs/mines.jpg' />
+        </Link>
+
+        <Link to={'/penalty'} >
+          <Li img='../imgs/penalty.jpg' />
+        </Link>
         <Li img='../imgs/studio.png' link='#' />
         <Li img='../imgs/studio.png' link='#' />
         <Li img='../imgs/studio.png' link='#' />
