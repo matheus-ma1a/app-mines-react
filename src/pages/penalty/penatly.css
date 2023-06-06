@@ -90,6 +90,8 @@
 }
 
 .iframe-penalty {
+  display: flex;
+  justify-content: center;
   width: 95%;
   height: 95%;
 }

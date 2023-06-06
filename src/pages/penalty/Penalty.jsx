@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import './penatly.css'
 import Timer from "../../components/Timer"
-import PenaltyPreload from "./PenaltyPreload";
+import Preload from "./Preload";
+import PenaltySinal from "./PenaltySinal";
 
-const classes = ['card', 'card', 'card', 'card', 'bola']
 
 const baguncaSinal = () => {
+    const classes = ['card', 'card', 'bola', 'card', 'card']
     const arrayfixo = [...classes]
     const arrayEmbaralhado = arrayfixo.sort(() => Math.random() - 0.5)
     return arrayEmbaralhado
@@ -15,6 +16,7 @@ const baguncaSinal = () => {
 function Penalty() {
     const [render, setRender] = useState(false)
     const [sinal, setSinal] = useState(baguncaSinal())
+    const [preload, setPreload] = useState(['card', 'card', 'card', 'card', 'card'])
 
 
     return (
@@ -29,7 +31,7 @@ function Penalty() {
 
                     <div className="contentsinalEBotons-penalty">
                         <div className="contetnSinal-penalty">
-                            {render ? <PenaltyPreload array={sinal} /> : <PenaltyPreload array={sinal} />}
+                            {render ? <PenaltySinal array={sinal} /> : <Preload pre={preload} />}
                         </div>
 
                         <div className="wapperBtn-penalty">

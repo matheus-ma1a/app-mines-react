@@ -1,7 +1,9 @@
 import React from "react";
 
 
-function PenaltyPreload(props) {
+function PenaltySinal(props) {
+
+  // console.log(props.array[0]);
 
   return (
 
@@ -23,4 +25,4 @@ function PenaltyPreload(props) {
 
 }
 
-export default PenaltyPreload;
+export default PenaltySinal;
