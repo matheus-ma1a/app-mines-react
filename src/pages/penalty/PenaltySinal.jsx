@@ -3,7 +3,6 @@ import React from "react";
 
 function PenaltySinal(props) {
 
-  // console.log(props.array[0]);
 
   return (
 

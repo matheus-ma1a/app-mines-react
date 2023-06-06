@@ -5,10 +5,30 @@ import Preload from "./Preload";
 import PenaltySinal from "./PenaltySinal";
 
 
+let resultadoAnterior = null;
+
 const baguncaSinal = () => {
-    const classes = ['card', 'card', 'bola', 'card', 'card']
-    const arrayfixo = [...classes]
+    const classes = ['card', 'card', 'bola', 'card', 'card'];
+
+    let arrayEmbaralhado = resultadoAnterior;
+    while (arrayEmbaralhado === resultadoAnterior) {
+        const arrayFixo = [...classes];
+        arrayEmbaralhado = arrayFixo.sort(() => Math.random() - 0.5);
+    }
+
+    resultadoAnterior = arrayEmbaralhado;
+
+    return arrayEmbaralhado;
+};
+
+function mudaBandeira() {
+
+    const bandeirasArray = ['🇹🇷', '🇮🇹', '🇳🇱', '🏴󠁧󠁢󠁥󠁮󠁧󠁿', '🇺🇦', '🇭🇷', '🇵🇱', '🇵🇹', '🇲🇫', '🇨🇭', '🇪🇸', '🇧🇪', '🇦🇹', '🇮🇪', '🇨🇿', '🇩🇪', '🇦🇿', '🇩🇰', '🇫🇮', '🇷🇸', '🇺🇿', '🏴󠁧󠁢󠁳󠁣󠁴󠁿', '🇸🇪', '🇦🇱',]
+
+    const arrayfixo = [...bandeirasArray]
+
     const arrayEmbaralhado = arrayfixo.sort(() => Math.random() - 0.5)
+
     return arrayEmbaralhado
 }
 
@@ -16,8 +36,8 @@ const baguncaSinal = () => {
 function Penalty() {
     const [render, setRender] = useState(false)
     const [sinal, setSinal] = useState(baguncaSinal())
-    const [preload, setPreload] = useState(['card', 'card', 'card', 'card', 'card'])
-
+    const [preload] = useState(['card', 'card', 'card', 'card', 'card'])
+    const [flags, setFlags] = useState(mudaBandeira())
 
     return (
         <div className="wapper-penalty">
@@ -25,7 +45,7 @@ function Penalty() {
                 <div className="grid-penalty">
                     <div className="p envolvetx-penalty">
                         <p className="infoEntrada-penalty" >🎯Entrada:</p>
-                        <img className="bandeiras-penalty" src="" alt="" />
+                        { render && <img className="bandeiras-penalty" src={`../../../public/imgs/flags/${flags[0]}.svg`} alt="" />}
                         <p className="p timer-penalty">{render ? <Timer setRender={setRender} /> : '00:00'}</p>
                     </div>
 
@@ -41,6 +61,7 @@ function Penalty() {
 
                                     setRender(!render)
                                     setSinal(baguncaSinal())
+                                    setFlags(mudaBandeira())
                                 }}
                                 className="button myButton1-penalty"
                             >HACKER SINAL</button>

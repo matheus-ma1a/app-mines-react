@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-
 const Countdown = ({ setRender }) => {
-  const [count, setCount] = useState(10); // Tempo em segundos (3 minutos = 180 segundos)
+  const [count, setCount] = useState(180); // Tempo em segundos (3 minutos = 180 segundos)
 
   useEffect(() => {
 
@@ -10,7 +9,6 @@ const Countdown = ({ setRender }) => {
 
       setCount((prevCount) => {
 
-        
         if (prevCount == 0) {
           clearInterval(timer);
           return prevCount
