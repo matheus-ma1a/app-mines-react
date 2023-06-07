@@ -18,7 +18,7 @@ header {
 .wrapper-app{
   position: relative;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .imgSLD-Home{

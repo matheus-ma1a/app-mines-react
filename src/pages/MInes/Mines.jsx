@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom'
 import './Mines.css'
 import MinerGrid from "./MinerGrid/MineGrid";
 import MinesPreload from "./MinerPreload/MinesPreload";

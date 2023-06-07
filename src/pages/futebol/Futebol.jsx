@@ -9,7 +9,7 @@ function Futebol() {
       <ButtonHome/>
 
         <div className="sinal-Futebol">
-          <img src="/public/imgs/Futebol.png" alt="" />
+          <img src="/imgs/Futebol.png" alt="" />
           <p className="confirm-Futebol" >⬛🟦🟥 Possível entrada no FOOTBALL 🟦⬜🟥</p>
           <p className="enter-Futebol" style={{ display: "inline" }} >Entre agora no FOOTBALL</p>
           <p className="sinalRandom-Futebol" style={{ display: "inline" }} >◾ ENTRAR NO 🟥 ◾</p>
