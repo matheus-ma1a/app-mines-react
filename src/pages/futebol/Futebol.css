@@ -1,4 +1,4 @@
-.sinal-Futebol{
+.sinal-Futebol , .wrapper-entrada{
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -9,4 +9,8 @@
 .ifremeDiv{
   display: flex;
   justify-content: center;
+}
+
+.img-Futebol{
+  width: 85px;
 }
