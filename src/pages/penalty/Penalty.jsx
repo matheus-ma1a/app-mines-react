@@ -3,6 +3,7 @@ import './penatly.css'
 import Timer from "../../components/Timer"
 import Preload from "./Preload";
 import PenaltySinal from "./PenaltySinal";
+import ButtonHome from "../../components/butaohome/ButtonHome";
 
 
 let resultadoAnterior = null;
@@ -40,12 +41,13 @@ function Penalty() {
     const [flags, setFlags] = useState(mudaBandeira())
 
     return (
-        <div className="wapper-penalty">
-            <div className="content-penalty">
+        <div className="content">
+            <div className="wrapper">
+                <ButtonHome/>
                 <div className="grid-penalty">
                     <div className="p envolvetx-penalty">
                         <p className="infoEntrada-penalty" >🎯Entrada:</p>
-                        { render && <img className="bandeiras-penalty" src={`../../../public/imgs/flags/${flags[0]}.svg`} alt="" />}
+                        {render && <img className="bandeiras-penalty" src={`/imgs/flags/${flags[0]}.svg`} alt="" />}
                         <p className="p timer-penalty">{render ? <Timer setRender={setRender} /> : '00:00'}</p>
                     </div>
 
@@ -56,6 +58,7 @@ function Penalty() {
 
                         <div className="wapperBtn-penalty">
                             <button
+                                style={{ backgroundColor: render ? 'red' : '#30B309' }}
                                 disabled={render ? true : false}
                                 onClick={() => {
 
@@ -65,13 +68,13 @@ function Penalty() {
                                 }}
                                 className="button myButton1-penalty"
                             >HACKER SINAL</button>
-                            <button className="button myButton2-penalty" ><p className="textAcessarbtn-penalty" >ACESSAR JOGO</p></button>
+                            <button onClick={() => { setJogogMines(true) }} className="button myButton2-penalty" ><p className="textAcessarbtn-penalty" >ACESSAR JOGO</p></button>
                         </div>
                     </div>
 
                 </div>
                 <div className="iframe-penalty">
-                    <iframe className="iframe-content" src="https://go.aff.afiliadoszep.bet/6yw4h6mg" frameborder="0"></iframe>
+                    <iframe className="iframe-content" src="https://zep.bet/casino/9550-penaltyshootout" frameborder="0"></iframe>
                 </div>
             </div>
         </div>

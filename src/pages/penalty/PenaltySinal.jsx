@@ -1,8 +1,6 @@
 import React from "react";
 
-
 function PenaltySinal(props) {
-
 
   return (
 
@@ -20,8 +18,6 @@ function PenaltySinal(props) {
       </div>
     </>
   )
-
-
 }
 
 export default PenaltySinal;

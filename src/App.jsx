@@ -7,7 +7,7 @@ import Li from './components/Li/Li'
 function App() {
 
   return (
-    <>
+    <div className='wrapper-app' >
 
       <div className='img-slide-Home' >
         <img className='imgSLD-Home' src="imgs/imgSlide/1.png" alt="" />
@@ -32,11 +32,16 @@ function App() {
         <Link to={'/penalty'} >
           <Li img='../imgs/penalty.jpg' />
         </Link>
+
+        <Link to={'/Futebol'} >
+          <Li img='../imgs/Futebol.png' />
+        </Link>
+        
       </ul>
 
       <Footer />
 
-    </>
+    </div>
   )
 }
 
