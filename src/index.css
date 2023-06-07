@@ -42,3 +42,17 @@ body .wrapper{
   background: #0063d4;
   border-radius: 15px;
 }
+
+ul{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  gap: 5px;
+}
+
+li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

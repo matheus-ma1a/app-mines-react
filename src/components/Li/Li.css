@@ -1,17 +1,3 @@
-li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul{
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  justify-content: center;
-  gap: 5px;
-}
-
 .imgMines{
   max-width:200px;
   max-height:250px;
