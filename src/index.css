@@ -35,7 +35,6 @@ body .content {
 
 body .wrapper{
   overflow: hidden;
-  overflow-y: scroll;
   width: 95%;
   max-width: 1440px;
   height: 98vh;

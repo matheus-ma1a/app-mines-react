@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const Countdown = ({ setRender }) => {
-  const [count, setCount] = useState(180); // Tempo em segundos (3 minutos = 180 segundos)
+
+const Countdown = ({ setRender, setControl }) => {
+  const [count, setCount] = useState(10); // Tempo em segundos (3 minutos = 180 segundos)
 
   useEffect(() => {
 
@@ -15,19 +16,20 @@ const Countdown = ({ setRender }) => {
         }
         return prevCount - 1;
       });
-      
+
     }, 1000);
-    
+
     return () => {
       clearInterval(timer);
     };
   }, []);
 
-  useEffect(()=>{
-    if(count == 0 ){
+  useEffect(() => {
+    if (count == 0) {
       setRender(false)
+      setControl(false)
     }
-  },[count])
+  }, [count])
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
