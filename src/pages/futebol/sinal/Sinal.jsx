@@ -1,9 +1,6 @@
 import React from "react";
-import { useState } from "react";
 
 function Sinal() {
-  const [visibilidade, setVisibilidade] = useState(false)
-
 
   function ramdCor() {
     const cor = ['🟥', '🟦', '🟦', '🟦', '🟥', '🟥', '🟥', '🟥', '🟦', '🟦', '🟦',]

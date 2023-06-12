@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Li from './components/Li/Li'
 
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Deshboard';
+  })
+
 
   return (
     <div className='wrapper-app' >
@@ -37,6 +43,9 @@ function App() {
           <Li img='../imgs/Futebol.png' />
         </Link>
 
+        <Link to={'/Tiger'} >
+          <Li img='../public/imgs/screen-3.webp' />
+        </Link>
         
       </ul>
 

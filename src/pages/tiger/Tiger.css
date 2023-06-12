@@ -1,0 +1,17 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alerta{
+  padding: 10px;
+  background: red;
+  color: black;
+  font-weight: bold;
+  font-size: small;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}

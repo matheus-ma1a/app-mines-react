@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import './penatly.css'
 import Timer from "../../components/Timer"
 import Preload from "./Preload";
@@ -39,6 +40,11 @@ function Penalty() {
     const [sinal, setSinal] = useState(baguncaSinal())
     const [preload] = useState(['card', 'card', 'card', 'card', 'card'])
     const [flags, setFlags] = useState(mudaBandeira())
+
+    useEffect(() => {
+        document.title = 'Penalty';
+      })
+    
 
     return (
         <div className="content">

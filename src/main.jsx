@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Mines from './pages/MInes/Mines.jsx'
 import Penalty from './pages/penalty/Penalty.jsx'
 import Futebol from './pages/futebol/Futebol.jsx'
+import Tiger from './pages/tiger/Tger.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/Futebol',
     element: <Futebol/>
+  },
+  {
+    path: '/Tiger',
+    element: <Tiger/>
   },
 ])
 

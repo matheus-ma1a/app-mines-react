@@ -9,6 +9,11 @@ function Futebol() {
   const [control, setControl] = useState(false)
   const [timer, setTimer] = useState(false)
 
+  useEffect(() => {
+    document.title = 'Futebol Studio';
+  })
+
+
   function handleJogar() {
     setControl(true)
     setTimer(true)

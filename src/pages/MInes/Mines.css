@@ -78,7 +78,7 @@ iframe {
 .grid-Mines {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+  gap: 8px;
 }
 
 .valido-ate-Mines {
@@ -134,8 +134,8 @@ iframe {
   margin-top: 30px;
 }
 
-.geraSinal-Mines {
-  margin-right: 50px;
+.geraSinal-Mines{
+  width: 180px;
 }
 
 img {
