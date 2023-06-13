@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import ButtonHome from "../../components/butaohome/ButtonHome";
 import './Tiger.css'
+import SinalTiger from "./sinalTiger/SinalTiger";
+import Timer from "../../components/Timer"
 
 function Tiger() {
+  const [render, setRender] = useState(false)
 
   useEffect(() => {
     document.title = 'Tiger Fortune';
   })
+
+  function handleButton() {
+    setRender(!render)
+  }
 
   return (
     <div className="content" >
       <div className="wrapper">
         <ButtonHome />
         <div className="main">
-          <img src="../../../public/imgs/screen-3.webp" alt="" />
+
+          <img src="/imgs/screen-3.webp" alt="" />
+
           <h1>Tiger</h1>
-          <p>🐯FALHA CONFIRMADA🐯</p>
-          <p>🎮Máximo de jogadas: 14</p>
-          <p>⏱️Válido até: x 15:16</p>
-          {/* <button onClick={} >pegar sinal</button> */}
+
+          {render ? <SinalTiger /> : <h2 className="h2Tiger" >clique no botao para pegar o sinal</h2>}
+
+          {render && <Timer setRender={setRender} />}
+
+          <button
+            disabled={render ? true : false}
+            onClick={handleButton}
+            style={{ backgroundColor: render ? 'red' : '#30B309' }}
+          >pegar sinal</button>
+
           <p className="alerta" >SINAIS SÓ FUNCIONAM NA PLATAFORMA ABAIXO</p>
+
           <div className="ifrmeWapper-Mines">
-            {/* <iframe src="https://zep.bet/casino/spribe-mines" frameBorder="0"></iframe> */}
+            <iframe src="https://zep.bet/casino/20102-fortunetiger" frameBorder="0"></iframe>
           </div>
         </div>
       </div>

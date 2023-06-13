@@ -33,7 +33,7 @@ function Mines() {
   useEffect(() => {
     document.title = 'MI-Mines';
   })
-  
+
 
   function handle() {
     setRender(!render)
@@ -61,7 +61,11 @@ function Mines() {
             </div>
 
             <div className="wapperBtn-Mines">
-              <button disabled={render ? true : false} style={{ backgroundColor: render ? 'red' : '#30B309' }} onClick={handle} className="geraSinal-Mines">HACKEAR SINAL</button>
+              <button
+                disabled={render ? true : false}
+                style={{ backgroundColor: render ? 'red' : '#30B309' }}
+                onClick={handle}
+                className="geraSinal-Mines">HACKEAR SINAL</button>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const Countdown = ({ setRender, setControl }) => {
   useEffect(() => {
     if (count == 0) {
       setRender(false)
-      setControl(false)
+      setControl && setControl(false)
     }
   }, [count])
 
