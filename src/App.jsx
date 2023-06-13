@@ -44,7 +44,7 @@ function App() {
         </Link>
 
         <Link to={'/Tiger'} >
-          <Li img='../public/imgs/screen-3.webp' />
+          <Li img='/imgs/Tiger.png' />
         </Link>
         
       </ul>

@@ -22,7 +22,7 @@ function Tiger() {
         <ButtonHome />
         <div className="main">
 
-          <img src="/imgs/screen-3.webp" alt="" />
+          <img src="/imgs/Tiger.png" alt="" />
 
           <h1>Tiger</h1>
 
