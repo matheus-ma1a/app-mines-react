@@ -19,6 +19,7 @@ header {
   position: relative;
   width: 100vw;
   overflow-x: hidden;
+  min-height: 800px;
 }
 
 .imgSLD-Home{
