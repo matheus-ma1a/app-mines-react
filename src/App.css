@@ -12,7 +12,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 250px;
+  margin: 80px 0 50px 0 ;
 }
 
 .wrapper-app{
