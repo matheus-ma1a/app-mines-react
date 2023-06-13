@@ -13,8 +13,14 @@
 
 .img-Futebol{
   width: 85px;
+  margin-bottom: 20px;
+}
+
+.confirm-Futebol , .enter-Futebol{
+  font-size: large;
 }
 
 .protect-Futebol{
   margin-bottom: 25px;
+
 }

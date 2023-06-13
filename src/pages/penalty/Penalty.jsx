@@ -74,7 +74,6 @@ function Penalty() {
                                 }}
                                 className="button myButton1-penalty"
                             >HACKER SINAL</button>
-                            <button onClick={() => { setJogogMines(true) }} className="button myButton2-penalty" ><p className="textAcessarbtn-penalty" >ACESSAR JOGO</p></button>
                         </div>
                     </div>
 

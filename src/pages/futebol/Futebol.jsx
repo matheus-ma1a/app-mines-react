@@ -27,9 +27,12 @@ function Futebol() {
         <div className="sinal-Futebol">
           <img className="img-Futebol" src="/imgs/Futebol.png" alt="" />
           <div className="wrapper-entrada">
-            {timer && <Timer setRender={setTimer} setControl={setControl} />}
             {control ? <Sinal /> : <Falso />}
-            <button onClick={handleJogar} >jogar</button>
+            {timer && <Timer setRender={setTimer} setControl={setControl} />}
+            <button
+              onClick={handleJogar}
+              style={{ backgroundColor: control ? 'red' : '#30B309' }}
+            >jogar</button>
           </div>
         </div>
 
