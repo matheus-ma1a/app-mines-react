@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
+// eslint-disable-next-line react/prop-types
 const Countdown = ({ setRender, setControl }) => {
   const [count, setCount] = useState(180); // Tempo em segundos (3 minutos = 180 segundos)
 
@@ -29,7 +30,7 @@ const Countdown = ({ setRender, setControl }) => {
       setRender(false)
       setControl && setControl(false)
     }
-  }, [count])
+  })
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);

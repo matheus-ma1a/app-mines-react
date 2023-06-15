@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import './Futebol.css'
 import ButtonHome from "../../components/butaohome/ButtonHome";
 import Sinal from "./sinal/Sinal";

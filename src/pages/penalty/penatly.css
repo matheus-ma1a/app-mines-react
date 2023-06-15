@@ -24,6 +24,10 @@
   
 }
 
+.iframe-content{
+  border: none;
+}
+
 .contentsinalEBotons-penalty {
   display: flex;
   flex-direction: column;

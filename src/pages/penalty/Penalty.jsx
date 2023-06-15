@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import './penatly.css'
 import Timer from "../../components/Timer"
@@ -79,7 +79,7 @@ function Penalty() {
 
                 </div>
                 <div className="iframe-penalty">
-                    <iframe className="iframe-content" src="https://zep.bet/casino/9550-penaltyshootout" frameborder="0"></iframe>
+                    <iframe className="iframe-content" src="https://zep.bet/casino/9550-penaltyshootout" ></iframe>
                 </div>
             </div>
         </div>

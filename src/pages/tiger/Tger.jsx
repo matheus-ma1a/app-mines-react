@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import ButtonHome from "../../components/butaohome/ButtonHome";
 import './Tiger.css'
@@ -22,7 +22,7 @@ function Tiger() {
         <ButtonHome />
         <div className="main">
 
-          <img src="/imgs/Tiger.png" alt="" />
+          <img src="/imgs/Tiger.jpg" alt="" />
 
           <h1>Tiger</h1>
 

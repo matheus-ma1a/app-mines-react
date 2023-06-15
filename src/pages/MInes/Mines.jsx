@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import './Mines.css'
 import MinerGrid from "./MinerGrid/MineGrid";
 import MinesPreload from "./MinerPreload/MinesPreload";
